@@ -8,6 +8,8 @@ public class GoogleCaptchaApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(GoogleCaptchaApplication.class, args);
+		
+		// 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
 	}
 
 }
