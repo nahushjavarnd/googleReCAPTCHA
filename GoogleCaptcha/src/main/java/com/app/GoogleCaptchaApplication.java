@@ -10,6 +10,7 @@ public class GoogleCaptchaApplication {
 		SpringApplication.run(GoogleCaptchaApplication.class, args);
 		
 		// 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
+		
 	}
 
 }
