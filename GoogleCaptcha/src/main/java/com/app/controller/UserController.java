@@ -37,11 +37,11 @@ public class UserController {
 		if(validator.isValidCaptcha(captcha)) {
 			
 			Integer id = service.creatUser(user);
-			model.addAttribute("Messages","User with id : '"+id +"' Saved Successfuly !");
+			model.addAttribute("messages","User with id : '"+id +"' Saved Successfuly !");
 			model.addAttribute("user", new User());
 						
 		}else {
-			model.addAttribute("Messages", "please validate captcha first");
+			model.addAttribute("messages", "please validate captcha first");
 		}
 		return "registerUser";
 	}
@@ -50,6 +50,7 @@ public class UserController {
 	public String getAllUsers(Model model) {
 		List<User> users= service.getAllUsers();
 		model.addAttribute("list", users);
+		System.out.println(users);
 		return "listUsers";
 	}
 	

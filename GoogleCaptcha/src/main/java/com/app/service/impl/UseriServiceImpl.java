@@ -14,6 +14,10 @@ import com.app.service.UserService;
 //@Service annotation is used with classes that provide some business functionalities.
 
 public class UseriServiceImpl implements UserService  {
+
+	
+	// Autowiring feture of spring framwork enable you to inject the object depedency implicity. it internally users setter or constructor  
+	// injection . Autowiring cant be used to inject primitive and string values.
 	
 	
 	@Autowired
@@ -23,14 +27,14 @@ public class UseriServiceImpl implements UserService  {
 	@Override
 	public Integer creatUser(User user) {
 		Integer userId= repo.save(user).getId();
-		
-		return null;
+		return userId;
 	}
 
 	@Override
 	public List<User> getAllUsers() {
 		
-		return null;
+		List<User> users= repo.findAll();
+		return users;
 	}
 
 }

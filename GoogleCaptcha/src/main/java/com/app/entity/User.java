@@ -2,6 +2,7 @@ package com.app.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import lombok.Data;
@@ -19,8 +20,7 @@ import lombok.Setter;
 public class User {
 	
 	@Id  // primery key
-	@GeneratedValue // genration strategy of primary key
-	
+	@GeneratedValue(strategy = GenerationType.IDENTITY)// genration strategy of primary key
 	private Integer id;
 	private String name;
 	private String email;
