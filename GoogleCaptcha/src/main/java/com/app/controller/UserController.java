@@ -50,7 +50,6 @@ public class UserController {
 	public String getAllUsers(Model model) {
 		List<User> users= service.getAllUsers();
 		model.addAttribute("list", users);
-		System.out.println(users);
 		return "listUsers";
 	}
 	

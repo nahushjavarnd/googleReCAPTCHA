@@ -17,4 +17,6 @@ public interface UserRepository extends JpaRepository<User, Integer> {
 	//They centralize common data access functionality, providing better maintainability 
 	//and decoupling the infrastructure or technology used to access databases from the domain model layer.
 	
+	
+	
 }
