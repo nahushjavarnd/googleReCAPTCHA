@@ -8,5 +8,8 @@ public interface UserService {
 	
 	Integer creatUser(User user);
 	List<User> getAllUsers();
+	User getUserById(int id);
+	
+	
 
 }

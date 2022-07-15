@@ -1,6 +1,7 @@
 package com.app.service.impl;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -35,6 +36,21 @@ public class UseriServiceImpl implements UserService  {
 		
 		List<User> users= repo.findAll();
 		return users;
+	}
+
+	@Override
+	public User getUserById(int id) {
+		
+		 return repo.findById(id).get();
+//		Optional<User> optional = repo.findById(id);
+//		User user = null;
+//		if (optional.isPresent()) {
+//			user = optional.get();
+//		} else {
+//			throw new RuntimeException(" Employee not found for id :: " + id);
+//		}
+//		
+//		return null;
 	}
 
 }

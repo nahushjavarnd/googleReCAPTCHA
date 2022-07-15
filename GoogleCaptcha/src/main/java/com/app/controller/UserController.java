@@ -2,11 +2,14 @@ package com.app.controller;
 
 import java.util.List;
 
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -27,7 +30,7 @@ import com.app.validator.CaptchaValidator;
 
 
 // mapping an HTTP request to a method using some basic criteria.
-@RequestMapping("/user")
+@RequestMapping("/")
 public class UserController {
 	
 	
@@ -39,8 +42,30 @@ public class UserController {
 	private CaptchaValidator validator;
 	
 	
+	@GetMapping("/") 
+    public String index() {
+        return "index";
+    }
 	
-	@GetMapping("/register") // Getmapping is a Spring notation and is widely used in mapping HTTP GET requests
+	@GetMapping("/about") 
+    public String about() {
+        return "about";
+    }
+	@GetMapping("/contact") 
+    public String contact() {
+        return "contact";
+    }
+	@GetMapping("/service") 
+    public String service() {
+        return "service";
+    }
+	@GetMapping("/blog") 
+    public String blog() {
+        return "blog";
+    }
+	
+
+	@GetMapping("/register") // Getmapping is a Spring annotions and is widely used in mapping HTTP GET requests
 	public String registerUser(Model model) {
 		model.addAttribute("user", new User());
 		return "registerUser";
@@ -50,6 +75,7 @@ public class UserController {
 	//The @PostMapping is specialized version of @RequestMapping annotation that acts as a shortcut for @RequestMapping(method = RequestMethod. POST) . 
 	// The @PostMapping annotated methods in the @Controller annotated classes handle the HTTP POST requests matched with given URI expression.
 	
+
 	@PostMapping("/save")
 	public String saveUser(@ModelAttribute User user, Model model, @RequestParam("g-recaptcha-response") String captcha) {
 		
@@ -76,5 +102,18 @@ public class UserController {
 		return "listUsers";
 	}
 	
+	@GetMapping("/all/{id}")
+	public String getUserById(@PathVariable int id) {
+		
+			User user = service.getUserById(id);
+			return "UserId";
+	       
+	    }  
+//		User user =  service.getUserById(id);
+//		model.addAttribute("list", user);
+//		return null;
+//		return null;
+	}
+	
 
-}
+

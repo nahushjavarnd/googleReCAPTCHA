@@ -1,0 +1,45 @@
+!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="https://www.thymeleaf.org/">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+	<!--	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" /> -->
+	<!--	<script src="https://www.google.com/recaptcha/api.js" async defer></script>  -->
+
+	<!-- Google Web Fonts -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href='http://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'>
+
+	<!-- Font Awesome -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+
+	<!-- Customized Bootstrap Stylesheet -->
+	<link href="/src/main/resources/static/css/style.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="wrapper" th:fragment="navigation">
+
+
+
+		<h1>Simply<span class="color">.</span></h1>
+		<nav>
+			<ul>
+				<li><a href="index.html" th:href="@{/}">Home</a></li>
+				<li><a href="about.html" th:href="@{/about}">About</a></li>
+				<li><a href="contact.html" th:href="@{/contact}">Contact</a>
+				<li>
+				<li><a href="service.html" th:href="@{/service}">Service</a></li>
+				<li><a href="listUsers.html" th:href="@{/userlist}">Blog</a></li>
+			</ul>
+		</nav>
+
+	</div>
+</body>
+
+</html>

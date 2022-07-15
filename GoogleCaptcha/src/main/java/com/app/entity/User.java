@@ -5,8 +5,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
  // @Data is a convenient shortcut annotation that bundles the features of @ToString, @EqualsAndHashCode, 
@@ -16,6 +19,9 @@ import lombok.Setter;
 @Entity // A class which can be stored in the data base via orm
 @Getter
 @Setter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 
 public class User {
 	
@@ -42,6 +48,7 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	
 	
 	
 
