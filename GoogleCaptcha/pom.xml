@@ -5,12 +5,12 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
+		<artifactId>spring-boot-starter-parent-New project will push</artifactId>
 		<version>2.7.0</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.app</groupId>
-	<artifactId>GoogleCaptcha</artifactId>
+	<artifactId>GoogleCaptcha_newbranch</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>GoogleCaptcha</name>
 	<description>Demo project for Spring Boot Google re Captch</description>
